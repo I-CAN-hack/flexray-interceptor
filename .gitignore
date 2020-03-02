@@ -1,0 +1,15 @@
+db/
+incremental_db/
+output_files/
+greybox_tmp/
+
+simulation/modelsim/*
+!simulation/modelsim/*.vht
+!simulation/modelsim/*.vhd
+!simulation/modelsim/*.py
+
+*.map
+*.qws
+*.bak
+*.bak*
+*.rpt

@@ -1,0 +1,84 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 0 0 256 144)
+	(text "main_clock" (rect 96 0 173 15)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 130 25 140)(font "Arial" ))
+	(port
+		(pt 0 64)
+		(input)
+		(text "inclk0" (rect 0 0 35 12)(font "Arial" (font_size 8)))
+		(text "inclk0" (rect 4 52 33 63)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 48 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "areset" (rect 0 0 37 12)(font "Arial" (font_size 8)))
+		(text "areset" (rect 4 68 36 79)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 48 80))
+	)
+	(port
+		(pt 256 64)
+		(output)
+		(text "c0" (rect 0 0 15 12)(font "Arial" (font_size 8)))
+		(text "c0" (rect 240 52 253 63)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 256 80)
+		(output)
+		(text "locked" (rect 0 0 38 12)(font "Arial" (font_size 8)))
+		(text "locked" (rect 220 68 253 79)(font "Arial" (font_size 8)))
+	)
+	(drawing
+		(text "Cyclone 10 LP" (rect 177 131 416 271)(font "Arial" ))
+		(text "inclk0 frequency: 12.000 MHz" (rect 58 60 242 129)(font "Arial" ))
+		(text "Operation Mode: Normal" (rect 58 71 219 151)(font "Arial" ))
+		(text "Clk " (rect 59 89 133 187)(font "Arial" ))
+		(text "Ratio" (rect 78 89 179 187)(font "Arial" ))
+		(text "Ph (dg)" (rect 103 89 237 187)(font "Arial" ))
+		(text "DC (%)" (rect 136 89 304 187)(font "Arial" ))
+		(text "c0" (rect 61 101 133 211)(font "Arial" ))
+		(text "20/3" (rect 79 101 177 211)(font "Arial" ))
+		(text "0.00" (rect 108 101 235 211)(font "Arial" ))
+		(text "50.00" (rect 139 101 302 211)(font "Arial" ))
+		(line (pt 0 0)(pt 257 0))
+		(line (pt 257 0)(pt 257 145))
+		(line (pt 0 145)(pt 257 145))
+		(line (pt 0 0)(pt 0 145))
+		(line (pt 56 87)(pt 166 87))
+		(line (pt 56 98)(pt 166 98))
+		(line (pt 56 110)(pt 166 110))
+		(line (pt 56 87)(pt 56 110))
+		(line (pt 75 87)(pt 75 110)(line_width 3))
+		(line (pt 100 87)(pt 100 110)(line_width 3))
+		(line (pt 133 87)(pt 133 110)(line_width 3))
+		(line (pt 165 87)(pt 165 110))
+		(line (pt 48 48)(pt 207 48))
+		(line (pt 207 48)(pt 207 127))
+		(line (pt 48 127)(pt 207 127))
+		(line (pt 48 48)(pt 48 127))
+		(line (pt 255 64)(pt 207 64))
+		(line (pt 255 80)(pt 207 80))
+	)
+)

@@ -1,0 +1,167 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2019  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+# Date created = 18:24:31  February 21, 2020
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		bendbeam_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone 10 LP"
+set_global_assignment -name DEVICE 10CL025YU256C8G
+set_global_assignment -name TOP_LEVEL_ENTITY bendbeam
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 19.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:24:31  FEBRUARY 21, 2020"
+set_global_assignment -name LAST_QUARTUS_VERSION "19.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_location_assignment PIN_T14 -to AIN3
+set_location_assignment PIN_P14 -to AIN4
+set_location_assignment PIN_K2 -to D11
+set_location_assignment PIN_L2 -to D12
+set_location_assignment PIN_P1 -to D13
+set_location_assignment PIN_R1 -to D14
+set_location_assignment PIN_L1 -to D12_R
+set_location_assignment PIN_D15 -to PIO_05
+set_location_assignment PIN_C15 -to PIO_06
+set_location_assignment PIN_B16 -to PIO_07
+set_location_assignment PIN_C16 -to PIO_08
+set_location_assignment PIN_T12 -to AIN
+set_location_assignment PIN_R11 -to AIN7
+
+
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
+set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name CONFIGURATION_VCCIO_LEVEL 3.3V
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_M2 -to CLK12M
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH flexray_intercept_tb -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME divider_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id divider_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME divider_tb -section_id divider_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME can_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id can_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME can_tb -section_id can_tb
+set_location_assignment PIN_P11 -to CAN0_TX
+set_location_assignment PIN_R12 -to CAN0_RX
+set_location_assignment PIN_N6 -to USR_BTN
+set_location_assignment PIN_T13 -to CAN1_TX
+set_location_assignment PIN_R13 -to CAN1_RX
+set_location_assignment PIN_R14 -to O_CAN1_TX
+set_location_assignment PIN_T15 -to O_CAN1_RX
+set_global_assignment -name EDA_TEST_BENCH_NAME flexray_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id flexray_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME flexray_tb -section_id flexray_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME flexray_intercept_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id flexray_intercept_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME flexray_intercept_tb -section_id flexray_intercept_tb
+set_global_assignment -name VHDL_FILE flexray_interceptor.vhd
+set_global_assignment -name VHDL_FILE flexray_pkg.vhd
+set_global_assignment -name VHDL_FILE flexray_rx.vhd
+set_global_assignment -name VHDL_FILE can_tx.vhd
+set_global_assignment -name VHDL_FILE can_rx.vhd
+set_global_assignment -name VHDL_FILE can_pkg.vhd
+set_global_assignment -name SDC_FILE bendbeam.sdc
+set_global_assignment -name QIP_FILE main_clock.qip
+set_global_assignment -name BDF_FILE bendbeam.bdf
+set_global_assignment -name VHDL_FILE divider.vhd
+set_global_assignment -name CDF_FILE permanent.cdf
+set_location_assignment PIN_N16 -to FR_TXEN_0
+set_location_assignment PIN_K15 -to FR_TXEN_1
+set_location_assignment PIN_N2 -to FR_TXEN_2
+set_location_assignment PIN_K16 -to FR_TX_1
+set_location_assignment PIN_J14 -to FR_RX_1
+set_location_assignment PIN_L15 -to FR_TX_0
+set_location_assignment PIN_L16 -to FR_RX_0
+set_location_assignment PIN_N1 -to FR_TX_2
+set_location_assignment PIN_P2 -to FR_RX_2
+set_location_assignment PIN_J1 -to FR_TXEN_3
+set_location_assignment PIN_J2 -to FR_TX_3
+set_location_assignment PIN_K1 -to FR_RX_3
+set_global_assignment -name VHDL_FILE joystick_decoder.vhd
+set_global_assignment -name VHDL_FILE pwm_driver.vhd
+set_location_assignment PIN_M6 -to LED0
+set_location_assignment PIN_T4 -to LED1
+set_location_assignment PIN_T3 -to LED2
+set_location_assignment PIN_R3 -to LED3
+set_location_assignment PIN_T2 -to LED4
+set_location_assignment PIN_R4 -to LED5
+set_location_assignment PIN_N5 -to LED6
+set_location_assignment PIN_N3 -to LED7
+set_location_assignment PIN_F15 -to SPI_CLK
+set_global_assignment -name VHDL_FILE flexray_torque_intercept.vhd
+set_location_assignment PIN_F13 -to SPI_CS
+set_location_assignment PIN_F16 -to SPI_MISO
+set_location_assignment PIN_D16 -to SPI_MOSI
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/divider.vht -section_id divider_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE can_pkg.vhd -section_id can_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/can_generator.vhd -section_id can_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE can_rx.vhd -section_id can_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE can_tx.vhd -section_id can_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/can.vht -section_id can_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE flexray_pkg.vhd -section_id flexray_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE flexray_rx.vhd -section_id flexray_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/flexray_generator.vhd -section_id flexray_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/flexray.vht -section_id flexray_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE flexray_pkg.vhd -section_id flexray_intercept_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE flexray_torque_intercept.vhd -section_id flexray_intercept_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE flexray_syn_packet.vhd -section_id flexray_intercept_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE flexray_interceptor.vhd -section_id flexray_intercept_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/flexray_generator.vhd -section_id flexray_intercept_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/flexray_intercept.vht -section_id flexray_intercept_tb
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
